@@ -7,7 +7,7 @@ class MyForm extends React.Component {
   render() {
     return (
   <div>
-     <div><h1 className='heading'>LOGIN PAGE!!!</h1></div>
+     <div><h1 className='heading'>LOGIN PAGE</h1></div>
       
      <div className='form'>
       <form>
