@@ -10,6 +10,8 @@ const EmployeeTile = (props) => {
                 <br />
                 <span>Age-{props.age}</span>
             </div>
+            <br />
+            <br />
         </div>
 
      );
