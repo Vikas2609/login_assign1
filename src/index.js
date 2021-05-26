@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from "./App"
 // import MyForm from './login';
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <MyForm /> */}
     <App/>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

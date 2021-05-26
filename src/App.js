@@ -1,5 +1,7 @@
 import React from 'react'
 import EmployeeData from "./components/EmployeeData"
+import Employees from './components/Employees';
+import NewEmployee from './components/NewEmployee';
 
 const employees= [
     {
@@ -40,6 +42,8 @@ const App = () => {
         <div>
             <h2>Employee data</h2>
             <EmployeeData employees={employees} />
+            <NewEmployee/>
+            <Employees employees={employees}/>
         </div>
  
       );
