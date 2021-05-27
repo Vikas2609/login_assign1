@@ -38,11 +38,17 @@ const employees= [
 
 
 const App = () => {
+    const saveDetails=(a,b,c)=>{
+        console.log("Entered name:",a)
+        console.log("Entered Age:",b)
+        console.log("ID:",c)
+        
+    }
     return (
         <div>
             <h2>Employee data</h2>
             <EmployeeData employees={employees} />
-            <NewEmployee/>
+            <NewEmployee saveDetails={saveDetails}/>
             <Employees employees={employees}/>
         </div>
  

@@ -1,9 +1,9 @@
 import React from 'react'
 import EmployeeForm from './EmployeeForm'
 
-const NewEmployee = () => {
+const NewEmployee = (props) => {
     return (
-        <EmployeeForm/>
+        <EmployeeForm saveDetails={props.saveDetails}/>
       );
 }
  

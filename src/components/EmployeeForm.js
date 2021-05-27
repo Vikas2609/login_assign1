@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-const EmployeeForm = () => {
+const EmployeeForm = (props) => {
     const [name,setName]=useState('')
     const [age,setAge]=useState('')
     const id=(Math.floor(Math.random()*10)).toString()
@@ -13,11 +13,10 @@ const EmployeeForm = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log("ID:" +id)
-        console.log("Entered name is:" + name)
-        console.log("Entered Age is:" + age)
+        props.saveDetails(name,age,id)
         setName('')
         setAge('')
+
     }
     return ( 
         <form onSubmit={handleSubmit}>
