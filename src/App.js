@@ -49,7 +49,7 @@ const App = () => {
             <h2>Employee data</h2>
             <EmployeeData employees={employees} />
             <NewEmployee saveDetails={saveDetails}/>
-            <Employees employees={employees}/>
+            <Employees/>
         </div>
  
       );
