@@ -1,10 +1,8 @@
-import React from 'react'
-import EmployeeForm from './EmployeeForm'
+import React from "react";
+import EmployeeForm from "./EmployeeForm";
 
 const NewEmployee = (props) => {
-    return (
-        <EmployeeForm saveDetails={props.saveDetails}/>
-      );
-}
- 
+  return <EmployeeForm addDetails={props.addDetails} />;
+};
+
 export default NewEmployee;

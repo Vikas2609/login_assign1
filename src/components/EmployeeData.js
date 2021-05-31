@@ -1,13 +1,14 @@
-import React from 'react'
-import EmployeeTile from "./EmployeeTile"
+import React from "react";
+import EmployeeTile from "./EmployeeTile";
 
 const EmployeeData = (props) => {
-    return (
-        <div>
-            {props.employees.map((item,index)=><EmployeeTile key={index} {...item}/>)}
-            
-        </div>
-    );
-}
+  return (
+    <div>
+      {props.employees.map((item, id) => (
+        <EmployeeTile key={id} {...item} />
+      ))}
+    </div>
+  );
+};
 
 export default EmployeeData;

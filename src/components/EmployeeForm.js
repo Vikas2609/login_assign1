@@ -1,30 +1,41 @@
-import React, { useState } from 'react'
-
+import React, { useState } from "react";
 
 const EmployeeForm = (props) => {
-    const [name,setName]=useState('')
-    const [age,setAge]=useState('')
-    const id=(Math.floor(Math.random()*10)).toString()
-    const handleNameChange = (e) => {
-        setName(e.target.value)
-    }
-    const handleAgeChange = (e) => {
-        setAge(e.target.value)
-    }
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        props.saveDetails(name,age,id)
-        setName('')
-        setAge('')
+  const [values, setValues] = useState({
+    name: "",
+    age: "",
+  });
+  const handleNameChange = (e) => {
+    setValues({ ...values, name: e.target.value });
+  };
+  const handleAgeChange = (e) => {
+    setValues({ ...values, age: e.target.value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.addDetails({
+      id: Math.floor(Math.random() * 10).toString(),
+      ...values,
+    });
+    setValues({ name: "", age: "" });
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Name"
+        value={values.name}
+        onChange={handleNameChange}
+      />
+      <input
+        type=""
+        placeholder="Age"
+        value={values.age}
+        onChange={handleAgeChange}
+      />
+      <button>Submit</button>
+    </form>
+  );
+};
 
-    }
-    return ( 
-        <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Name" value={name} onChange={handleNameChange}/>
-            <input type="" placeholder="Age" value={age} onChange={handleAgeChange}/>
-            <button>Submit</button>
-        </form>
-     );
-}
- 
-export default EmployeeForm ;
+export default EmployeeForm;
